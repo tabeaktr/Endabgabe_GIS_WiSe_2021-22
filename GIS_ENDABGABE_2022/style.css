@@ -24,7 +24,6 @@ h1 {
     position: sticky;
     float: right;
     font-size: 17px;
-    list-style-type: none;
 }
 
 body {
@@ -33,14 +32,20 @@ body {
     align-items: center;
 }
 
+ul {
+    list-style-type: none;
+    margin: auto;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+
 
 /*
 .container {
     width: 100%;
     max-width: 500px;
     background-color: salmon;
-}
-*/
+}*/
 
 form {
     background-color: tan;
