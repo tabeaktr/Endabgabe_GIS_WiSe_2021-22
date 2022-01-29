@@ -4,6 +4,11 @@
     text-align: center;
 }
 
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 
 /*
 *,
@@ -14,6 +19,13 @@
     padding: 0;
 }
 */
+
+.navigation {
+    position: sticky;
+    float: right;
+    font-size: 17px;
+    list-style-type: none;
+}
 
 body {
     display: block;
@@ -32,7 +44,7 @@ body {
 
 form {
     background-color: tan;
-    width: 370px;
+    width: 900px;
     padding: 20px;
     margin: auto;
 }
@@ -86,13 +98,6 @@ textarea:focus {
     transform: scaleX(1);
     /*Line breitet sich auf die Gesamtgröße des Hyperlinks aus*/
     transform-origin: left;
-}
-
-.navigation {
-    position: sticky;
-    top: 0;
-    float: right;
-    font-size: 17px;
 }
 
 table {
