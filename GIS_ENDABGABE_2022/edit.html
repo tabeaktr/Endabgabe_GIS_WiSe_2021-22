@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bearbeitungsseite</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    <h1>Anlageseite</h1>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a class="fancy-link" href="start.html">übersicht</a>
+            </li>
+            <li>
+                <a class="fancy-link" href="detailansicht.html">Details</a>
+            </li>
+        </ul>
+    </div>
+
+    <div hidden id="anlegeformular"></div>
+    <div>
+        <form>
+            <input type="text" name="id" id="itemID" hidden>
+            <input type="text" name="name" id="itemName" placeholder="Item.." required />
+            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" name="ablaufDatum" placeholder="Ablaufdatum" id="ablaufDatum" required />
+            <input type="text" name="note" id="notiz" placeholder="Notiz hinzufügen.." />
+            <select id="katkat" name="kategorie" placeholder="Kategorie auswählen..">
+                <option value="" disabled selected>Kategorie</option>
+                <option value="🥩">🥩</option>
+                <option value="🐟">🐟</option>
+                <option value="🍉">🍉</option>
+                <option value="🥦">🥦</option>
+                <option value="🧀">🧀</option>
+                <option value="🍦">🍦</option>
+                <option value="💬">💬</option>
+            </select>
+            <input type="submit" value="Anlegen" name="itemSubmit" id="itemSubmit" />
+
+        </form>
+    </div>
+
+    <script src="server.js"></script>
+    <script src="edit.js"></script>
+    <script src="filter.js"></script>
+</body>
+
+</html>

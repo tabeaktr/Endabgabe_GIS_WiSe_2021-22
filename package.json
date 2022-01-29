@@ -1,0 +1,27 @@
+{
+    "name": "tabea-ketterer",
+    "version": "1.0.0",
+    "description": "A B C",
+    "main": "start.js",
+    "devDependencies": {
+        "@types/mongodb": "^3.6.18",
+        "@types/node": "^15.12.4"
+    },
+    "scripts": {
+        "start": "node GIS_ENDABGABE_2022/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tabeaktr/Endabgabe_GIS_WiSe_2021-22.git"
+    },
+    "author": "Tabea Ketterer",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/tabeaktr/Endabgabe_GIS_WiSe_2021-22.git/issues"
+    },
+    "homepage": "https://github.com/tabeaktr/Endabgabe_GIS_WiSe_2021-22.git#readme",
+    "dependencies": {
+        "http": "^0.0.1-security",
+        "mongodb": "^3.6.9"
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h1>Startseite</h1>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a class="fancy-link" href="edit.html">Bearbeitungsseite</a>
+            </li>
+        </ul>
+    </div>
+    <input type="text" id="myInputName" onkeyup="showAll();suchen(0,'myInputName', false);suchen(2,'searchKategory', false);suchen(1,'searchDate',true);" placeholder="Name eingeben...">
+    <select id="searchKategory" onchange="showAll();suchen(0,'myInputName', false);suchen(2,'searchKategory', false);suchen(1,'searchDate',true);" name="kategorie">
+        <option value="Kategorie suchen...">Kategorie suchen...</option>
+        <option value="🥩">🥩</option>
+        <option value="🐟">🐟</option>
+        <option value="🍉">🍉</option>
+        <option value="🥦">🥦</option>
+        <option value="🧀">🧀</option>
+        <option value="🍦">🍦</option>
+        <option value="💬">💬</option>
+    </select>
+    <select id="searchDate" onchange="showAll();suchen(0,'myInputName', false);suchen(2,'searchKategory', false);suchen(1,'searchDate',true);" name="date" placeholder="Ablauf in..">
+        <option value="Läuft ab in...">Läuft ab in...</option>
+        <option value="Schon abgelaufen">Schon abgelaufen</option>
+        <option value="1">1 Tag</option>
+        <option value="2">2 Tage</option>
+        <option value="3">3 Tage</option>
+        <option value="4">4 Tage</option>
+    </select>
+
+    <div id="listenplatz"></div>
+    <script src="server.js"></script>
+    <script src="admin.js"></script>
+    <script src="filter.js"></script>
+</body>
+
+<!--TODO Kategorie Display auf Startseite, Suchzeilen auf Startseite, Klickbarkeit der Einträge Klick -> Detailseite, Notiz rausnehmen.-->
+
+</html>

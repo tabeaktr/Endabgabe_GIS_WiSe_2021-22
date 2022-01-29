@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h1>Detailansicht</h1>
+    <div class="navigation">
+        <ul>
+            <li>
+                <a class="fancy-link" href="start.html">übersicht</a>
+            </li>
+            <li>
+                <a class="fancy-link" href="edit.html">edit-page</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id=listenplatz></div>
+    <form action="edit.html" method="GET">
+        <input name="id" type="text" id="itemID" hidden>
+        <input id="deleteButton" type="button" value="Löschen">
+        <input type="submit" value="Bearbeiten">
+    </form>
+
+    <script src="server.js"></script>
+    <script src="detail.js"></script>
+    <!--TODO Hier: Einsehen Details (Name, Ablaufdatum, Anlegedatum, Notiz), auf diese Seite kommt man durch klicken auf Item in Startseite, hier bearbeiten (link auf edit-page)/löschen durch anklicken in Liste-->
+</body>
+
+</html>
