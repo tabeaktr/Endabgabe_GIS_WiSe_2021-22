@@ -1,6 +1,5 @@
 * {
     font-family: work sans;
-    font-weight: 500;
     background-color: #FAEBD7;
     text-align: center;
 }
@@ -32,7 +31,7 @@ body {
 */
 
 form {
-    background-color: burlywood;
+    background-color: tan;
     width: 370px;
     padding: 20px;
     margin: auto;
@@ -48,7 +47,7 @@ label {
 input#absender,
 textarea {
     width: 300px;
-    border: 1px solid burlywood3;
+    border: 1px solid blue;
     margin-bottom: 1em;
 }
 
@@ -63,8 +62,8 @@ textarea:focus {
 
 .fancy-link {
     text-decoration: none;
-    color: #ee6352;
     position: relative;
+    color: black;
 }
 
 .fancy-link::after {
@@ -80,6 +79,7 @@ textarea:focus {
     transform-origin: right;
     /*NACH dem hover wird die Transformation nach Rechts "right" gehen, da hier der transform-origin liegt*/
     transition: transform 250ms ease-in;
+    color: tan;
 }
 
 .fancy-link:hover::after {
@@ -92,6 +92,7 @@ textarea:focus {
     position: sticky;
     top: 0;
     float: right;
+    font-size: 17px;
 }
 
 table {
@@ -101,27 +102,19 @@ table {
     cursor: pointer;
 }
 
-
-/* Zebra striping */
-
-tr:nth-of-type(odd) {
-    background: #eee;
-}
-
 tr:hover {
-    background-color: burlywood3;
+    background-color: tan;
 }
 
 th {
-    background: #3498db;
-    color: white;
-    font-weight: bold;
+    background: tan;
+    color: black;
 }
 
 td,
 th {
     padding: 10px;
     border: 1px solid #ccc;
-    text-align: left;
-    font-size: 18px;
+    text-align: center;
+    font-size: 20px;
 }
