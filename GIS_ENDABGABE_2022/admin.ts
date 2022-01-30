@@ -1,8 +1,8 @@
-async function loadItemsFromDB(target: HTMLElement, attributes: string[]): Promise<void> {
+async function loadItemsFromDB(target: HTMLElement, attributes: string[]): Promise<void> { 
     let response: Response = await fetch("https://tabea-ketterer.herokuapp.com/getItems");
 
     if (!response.ok) {
-        console.error("Die Inhalte des Kühlschranks konnten nicht geladen werden.", response);
+        console.error("Die Inhalte des Gefrierschranks konnten nicht geladen werden.", response);
     }
 
     let allItems: any = await response.json();

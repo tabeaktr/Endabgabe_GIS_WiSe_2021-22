@@ -11,10 +11,8 @@ function suchen(_spalte, _id, isDate) {
     let txtValue;
     if (isDate) {
         let currentDate = new Date();
-        console.log(currentDate);
         if (filter == (("Schon abgelaufen").toUpperCase()) && _id == "searchDate") {
-            currentDate.setDate(currentDate.getDate() - 1);
-            console.log(currentDate);
+            currentDate.setDate(currentDate.getDate() - 1); //currentDate nimmt bei Initialisierung auch die Uhrzeit mit -> currentDate 1 Tag in die Vergangenheit verhindert, dass Inhalte vom heutigen Tag als "Schon abgelaufen gelten."
             for (let i = 0; i < tr.length; i++) {
                 td1 = tr[i].getElementsByTagName("td")[_spalte];
                 if (td1) {

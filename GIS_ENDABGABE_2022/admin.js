@@ -2,7 +2,7 @@
 async function loadItemsFromDB(target, attributes) {
     let response = await fetch("https://tabea-ketterer.herokuapp.com/getItems");
     if (!response.ok) {
-        console.error("Die Inhalte des Kühlschranks konnten nicht geladen werden.", response);
+        console.error("Die Inhalte des Gefrierschranks konnten nicht geladen werden.", response);
     }
     let allItems = await response.json();
     let table = document.createElement("table");
