@@ -1,5 +1,6 @@
 * {
     font-family: work sans;
+    color: black;
     background-color: rgb(220, 231, 235);
     text-align: center;
 }
@@ -39,6 +40,14 @@ ul {
     padding-right: 30px;
 }
 
+.searchbar,
+form {
+    background-color: lightblue;
+    width: 900px;
+    padding: 20px;
+    margin: auto;
+}
+
 
 /*
 .container {
@@ -47,12 +56,13 @@ ul {
     background-color: salmon;
 }*/
 
-form {
-    background-color: tan;
+
+/*form {
+    background-color: lightblue;
     width: 900px;
     padding: 20px;
     margin: auto;
-}
+}*/
 
 label {
     /* Beschriftung auf eigener Zeile */
@@ -96,7 +106,7 @@ textarea:focus {
     transform-origin: right;
     /*NACH dem hover wird die Transformation nach Rechts "right" gehen, da hier der transform-origin liegt*/
     transition: transform 250ms ease-in;
-    color: tan;
+    color: lightblue;
 }
 
 .fancy-link:hover::after {
@@ -113,11 +123,11 @@ table {
 }
 
 tr:hover {
-    background-color: tan;
+    background-color: blue;
 }
 
 th {
-    background: tan;
+    background: lightblue;
     color: black;
 }
 
