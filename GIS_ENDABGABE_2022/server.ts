@@ -36,15 +36,13 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
     console.log("HeaderSet");
 
     if (_request.url) {
-        console.log("find me");
+        
         let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
         let pathname: String | null = url.pathname;
-        console.log("URL Parsed");
+
         if (pathname == "/addItem") { //Item der DB hinzufügen
             
             let itime: Date = new Date();
-            console.log(url.query);
-            console.log(url.query.id);
             
             
             if (url.query.id != undefined) {
@@ -52,8 +50,6 @@ async function handleRequest(_request: Http.IncomingMessage, _response: Http.Ser
             } else {
                 contentCollection.insertOne({ name: url.query.name, note: url.query.note, ablaufDatum: url.query.ablaufDatum, time: itime.toLocaleDateString(), kategorie: url.query.kategorie });
             } 
-
-
 
             connectToDatabase(mongoUrl);
         }

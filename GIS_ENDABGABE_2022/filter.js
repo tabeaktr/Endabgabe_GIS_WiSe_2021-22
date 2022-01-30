@@ -11,13 +11,15 @@ function suchen(_spalte, _id, isDate) {
     let txtValue;
     if (isDate) {
         let currentDate = new Date();
+        console.log(currentDate);
         if (filter == (("Schon abgelaufen").toUpperCase()) && _id == "searchDate") {
+            currentDate.setDate(currentDate.getDate() - 1);
+            console.log(currentDate);
             for (let i = 0; i < tr.length; i++) {
                 td1 = tr[i].getElementsByTagName("td")[_spalte];
                 if (td1) {
-                    txtValue = td1.textContent || td1.innerText;
-                    let ablaufDatum = new Date(tr[i].getElementsByTagName("td")[_spalte].innerText);
-                    console.log("ablaufDatum: " + ablaufDatum + "," + "currentDate: " + currentDate);
+                    let splitDate = tr[i].getElementsByTagName("td")[_spalte].innerText.split(".");
+                    let ablaufDatum = new Date(splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0]);
                     if ((currentDate > ablaufDatum)) {
                         tr[i].style.display = tr[i].style.display;
                     }
@@ -33,9 +35,8 @@ function suchen(_spalte, _id, isDate) {
             for (let i = 0; i < tr.length; i++) {
                 td1 = tr[i].getElementsByTagName("td")[_spalte];
                 if (td1) {
-                    txtValue = td1.textContent || td1.innerText;
-                    let dateAsString = tr[i].getElementsByTagName("td")[_spalte].innerText;
-                    let ablaufDatum = new Date((dateAsString.split(".")[1] + "-" + dateAsString.split(".")[0] + "-" + dateAsString.split(".")[2]));
+                    let splitDate = tr[i].getElementsByTagName("td")[_spalte].innerText.split(".");
+                    let ablaufDatum = new Date(splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0]);
                     if ((targetDate >= ablaufDatum) && (currentDate <= ablaufDatum)) {
                         tr[i].style.display = tr[i].style.display;
                     }

@@ -10,7 +10,8 @@ async function loadEditSelectItemsFromDB() {
         if (allItems[i]._id == new URLSearchParams(window.location.search).get("id")) {
             document.getElementById("itemName").value = allItems[i].name;
             let date = allItems[i].ablaufDatum;
-            document.getElementById("ablaufDatum").value = date.replace(/\./g, "\/");
+            let splitDate = date.split(".");
+            document.getElementById("ablaufDatum").value = (splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0]);
             document.getElementById("notiz").value = allItems[i].note;
             document.getElementById("katkat").value = allItems[i].kategorie;
         }

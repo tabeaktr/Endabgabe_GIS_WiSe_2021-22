@@ -26,14 +26,10 @@ async function handleRequest(_request, _response) {
     _response.setHeader("Access-Control-Allow-Origin", "*");
     console.log("HeaderSet");
     if (_request.url) {
-        console.log("find me");
         let url = Url.parse(_request.url, true);
         let pathname = url.pathname;
-        console.log("URL Parsed");
         if (pathname == "/addItem") { //Item der DB hinzufügen
             let itime = new Date();
-            console.log(url.query);
-            console.log(url.query.id);
             if (url.query.id != undefined) {
                 contentCollection.replaceOne({ "_id": new Mongo.ObjectID(url.query.id) }, { name: url.query.name, note: url.query.note, ablaufDatum: url.query.ablaufDatum, time: itime.toLocaleDateString(), kategorie: url.query.kategorie });
             }

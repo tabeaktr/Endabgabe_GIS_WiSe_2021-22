@@ -12,8 +12,8 @@ async function loadEditSelectItemsFromDB(): Promise<void> {
         if (allItems[i]._id == new URLSearchParams(window.location.search).get("id")) {
             (<HTMLInputElement>document.getElementById("itemName")).value = allItems[i].name;
             let date: string = allItems[i].ablaufDatum;
-            
-            (<HTMLInputElement>document.getElementById("ablaufDatum")).value = date.replace(/\./g, "\/");
+            let splitDate: string[] = date.split(".");
+            (<HTMLInputElement>document.getElementById("ablaufDatum")).value = (splitDate[2] + "-" + splitDate[1] + "-" + splitDate[0]);
             (<HTMLInputElement>document.getElementById("notiz")).value = allItems[i].note;
             (<HTMLInputElement>document.getElementById("katkat")).value = allItems[i].kategorie;
         }
