@@ -1,16 +1,16 @@
-//server.js muss mit Node.js ausgeführt werden
+//server.js muss mit Node.js ausgeführt werden, Aufbau dieser Seite basiert auf einer Teilaufgabe aus dem letzten Semester (Aufgabe_3.4)
 import * as Http from "http";
 import * as Url from "url";
 import * as Mongo from "mongodb";
 
 
-const mongoUrl: string = "mongodb+srv://User3:Ananas123@tabea.fzpsx.mongodb.net/tabea"; //connection string zur MongoDB
+const mongoUrl: string = "mongodb+srv://User3:Ananas123@tabea.fzpsx.mongodb.net/tabea";
 
-let contentCollection: Mongo.Collection; //Inhalt
+let contentCollection: Mongo.Collection;
 
 let port: number = Number(process.env.PORT);
 if (!port)
-    port = 8100;  //Port wird auf 8100 gesetzt
+    port = 8100; 
 
 console.log("Starting Gefrierschrank");
 

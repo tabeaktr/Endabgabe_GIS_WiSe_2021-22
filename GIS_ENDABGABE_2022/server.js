@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//server.js muss mit Node.js ausgeführt werden
+//server.js muss mit Node.js ausgeführt werden, Aufbau dieser Seite basiert auf einer Teilaufgabe aus dem letzten Semester (Aufgabe_3.4)
 const Http = require("http");
 const Url = require("url");
 const Mongo = require("mongodb");
-const mongoUrl = "mongodb+srv://User3:Ananas123@tabea.fzpsx.mongodb.net/tabea"; //connection string zur MongoDB
-let contentCollection; //Inhalt
+const mongoUrl = "mongodb+srv://User3:Ananas123@tabea.fzpsx.mongodb.net/tabea";
+let contentCollection;
 let port = Number(process.env.PORT);
 if (!port)
-    port = 8100; //Port wird auf 8100 gesetzt
+    port = 8100;
 console.log("Starting Gefrierschrank");
 let server = Http.createServer();
 server.addListener("request", handleRequest);
