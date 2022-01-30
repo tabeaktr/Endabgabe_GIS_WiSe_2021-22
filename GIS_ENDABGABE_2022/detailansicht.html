@@ -24,16 +24,19 @@
         </ul>
     </div>
 
+
     <div id=listenplatz></div>
-    <form action="edit.html" method="GET">
-        <input name="id" type="text" id="itemID" hidden>
-        <input id="deleteButton" type="button" value="Löschen">
-        <input type="submit" value="Bearbeiten">
-    </form>
+    <div class="detailEdit">
+        <form action="edit.html" method="GET">
+            <input name="id" type="text" id="itemID" hidden>
+            <input id="deleteButton" type="button" value="Löschen">
+            <input type="submit" value="Bearbeiten">
+        </form>
+    </div>
 
     <script src="server.js"></script>
     <script src="detail.js"></script>
-    <!--TODO Hier: Einsehen Details (Name, Ablaufdatum, Anlegedatum, Notiz), auf diese Seite kommt man durch klicken auf Item in Startseite, hier bearbeiten (link auf edit-page)/löschen durch anklicken in Liste-->
+
 </body>
 
 </html>
